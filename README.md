@@ -19,6 +19,15 @@ Currently, two official plugins are available:
 - Firebase Setup
 - Deploying our app to production
 - create signup user account
+- Implemented Sign In user Api
+- Created Store with userSlice
+- Implemented SignOut
+- Update Profile
+- BugFix : signUp user dislplay name and profile picture update
+- BugFix : If the user not logged in redirect / browse to Login page and vice versa
+- Unsubscribed to the OnAuthStateChange Callback
+- Added HardCoded values to the Constants
+- Registered for TMDB app and R
 
 
 

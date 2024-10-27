@@ -6,6 +6,7 @@ import { auth } from "../utils/Firebase"
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/UserSlice";
+import { BODYIMG_URL, USERPROFILE_URL } from "../utils/Constants";
 
 
 const Login = () => {
@@ -40,17 +41,18 @@ const Login = () => {
 
                     //-------UPDATE PROFILE API FROM FIREBASE-------
                     updateProfile(user, {
-                        displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/149988360?v=4"
+                        displayName: name.current.value, photoURL: USERPROFILE_URL
                     }).then(() => {
                         // Profile updated!
                         //USED AUTH.CURRENTUSER
-                        const { uid, displayName, email, photoURL } = auth.currentUser                        
-                        dispatch(addUser({ uid: uid, name: displayName, email: email, photoURL: photoURL }))  
+                        const { uid, displayName, email, photoURL } = auth.currentUser
+                        dispatch(addUser({ uid: uid, name: displayName, email: email, photoURL: photoURL }))
                         navigate("/browse")
+                        
                     }).catch((error) => {
                         // An error occurred
                         setShowErrorMsg(error.message)
-                    }); 
+                    });
 
 
                     console.log(user);
@@ -69,7 +71,7 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    console.log(user);
+                    // console.log(user);
                     navigate("/browse")
                     alert("Signed In Succesfully")
 
@@ -90,7 +92,7 @@ const Login = () => {
 
             <div className="absolute w-full h-full top-0 left-0">
                 <img
-                    src="https://assets.nflxext.com/ffe/siteui/vlv3/74d734ca-0eab-4cd9-871f-bca01823d872/web/IN-en-20241021-TRIFECTA-perspective_2277eb50-9da3-4fdf-adbe-74db0e9ee2cf_large.jpg"
+                    src={BODYIMG_URL}
                     className="w-full h-full object-cover"
                 />
             </div>
