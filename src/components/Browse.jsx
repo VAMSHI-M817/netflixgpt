@@ -1,32 +1,20 @@
-import { data } from "autoprefixer"
 import Header from "./Header"
-import { useEffect } from "react"
-import { API_OPTIONS } from "../utils/Constants"
+import useNowPlayingMovies from "../customHooks/useNowPlayingMovies"
+import MainContainer from "./MainContainer";
+import SecondaryContainer from "./SecondaryContainer";
 
 
 
 
 
 const Browse = () => {
-
-  const getNowPlayingMovies = async () => {
-    const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', API_OPTIONS)
-    const data = await response.json()
-    console.log(data?.results);
-  }
-
-
-
-
-  useEffect(() => {
-    getNowPlayingMovies()
-  }, [])
-
+  const MoviesData = useNowPlayingMovies()
 
   return (
     <div>
       <Header />
-      This is the Browse component
+      <MainContainer />
+      <SecondaryContainer />
     </div>
   )
 }

@@ -5,6 +5,8 @@ const BODYIMG_URL = "https://assets.nflxext.com/ffe/siteui/vlv3/74d734ca-0eab-4c
 
 const USERPROFILE_URL = "https://avatars.githubusercontent.com/u/149988360?v=4"
 
+const PLAYING_MOVIES_API = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1"
+
 const API_OPTIONS = {
     method: 'GET',
     headers: {
@@ -16,19 +18,10 @@ const API_OPTIONS = {
 
 
 
-
-
-
-
-
-
-
-
-
-
 export {
     LOGO_URL,
     USERPROFILE_URL,
     BODYIMG_URL,
-    API_OPTIONS
+    API_OPTIONS,
+    PLAYING_MOVIES_API
 }
