@@ -7,6 +7,12 @@ const USERPROFILE_URL = "https://avatars.githubusercontent.com/u/149988360?v=4"
 
 const PLAYING_MOVIES_API = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1"
 
+const POPULAR_MOVIES_API = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
+
+const UPCOMING_MOVIES_API = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1"
+
+const TOP_RATED_MOVIES_API = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1"
+
 const API_OPTIONS = {
     method: 'GET',
     headers: {
@@ -15,7 +21,7 @@ const API_OPTIONS = {
     }
 };
 
-
+const MOVIE_CARD_IMG_API = "https://image.tmdb.org/t/p/w500/"
 
 
 export {
@@ -23,5 +29,9 @@ export {
     USERPROFILE_URL,
     BODYIMG_URL,
     API_OPTIONS,
-    PLAYING_MOVIES_API
+    PLAYING_MOVIES_API,
+    MOVIE_CARD_IMG_API,
+    POPULAR_MOVIES_API,
+    TOP_RATED_MOVIES_API,
+    UPCOMING_MOVIES_API
 }

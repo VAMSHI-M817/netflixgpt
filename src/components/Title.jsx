@@ -2,12 +2,16 @@ import React from 'react'
 
 const Title = ({ title, overview }) => {
     return (
-        <div className='flex flex-col items-start pt-[20%] px-10 gap-4 absolute text-white bg-gradient-to-r from-black w-screen aspect-video'>
-            <p className='text-5xl font-bold'>{title}</p>
-            <p className="text-justify leading-relaxed max-w-xl text-xl px-2 font-medium">{overview}</p>
-            <div className='flex gap-2'>
-                <button className='p-2 bg-white border px-12 py-4 text-xl font-bold rounded text-black'>▶ Play</button>
-                <button className='p-2 border px-12 py-4 text-xl font-bold text-white bg-slate-600 rounded '><span className=' font-bold text-2xl'>ⓘ</span> More Info</button>
+        <div className="w-screen aspect-video pt-[20%] px-6 md:px-24 absolute text-white bg-gradient-to-r from-black">
+            <h1 className="text-2xl md:text-6xl font-bold">{title}</h1>
+            <p className="hidden md:inline-block py-6 text-lg w-1/4">{overview}</p>
+            <div className="my-4 md:m-0">
+                <button className=" bg-white text-black py-1 md:py-4 px-3 md:px-12 text-xl  rounded-lg hover:bg-opacity-80">
+                    ▶️ Play
+                </button>
+                <button className="hidden md:inline-block mx-2  bg-gray-500 text-white p-4 px-12 text-xl bg-opacity-50 rounded-lg">
+                    More Info
+                </button>
             </div>
         </div>
     )

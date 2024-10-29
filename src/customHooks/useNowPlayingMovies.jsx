@@ -14,6 +14,7 @@ const useNowPlayingMovies = () => {
         const data = await response.json()
         setJsonData(data?.results)
         dispatch(addNowPlayingMovies(data?.results))
+
     }
 
     useEffect(() => {

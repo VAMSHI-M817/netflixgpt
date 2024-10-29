@@ -31,13 +31,15 @@ Currently, two official plugins are available:
 - Registered for TMDB app and Req the API
 - Got Data from TMDB movies
 - Custom hooks for Movies
-- Created Movies Slice 
-- Updated the slice with movie data 
-- Fetched data for Trailer Video 
-- Embeded the Youtbue Video 
-
-
-
+- Created Movies Slice
+- Updated the slice with movie data
+- Fetched data for Trailer Video
+- Embeded the Youtbue Video
+- Build Secondary Component
+- Build Movies List
+- Build Movies Card
+- TMDB image url
+- created customHooks for upcoming, toprated and popular movies
 
 -Login and SignUp - Sign In / Sign Up form
 -Browse(after Authentication)
