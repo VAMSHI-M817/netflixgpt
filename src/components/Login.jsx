@@ -136,13 +136,13 @@ const Login = () => {
                         {isSignInForm ? "Sign In" : "Sign Up"}
                     </button>
 
-                    <p className="text-white text-center font-bold">OR</p>
+                    {/* <p className="text-white text-center font-bold">OR</p>
 
                     <a href="#">
                         <p className="text-white text-lg sm:text-xl text-center">
                             Forgot password
                         </p>
-                    </a>
+                    </a> */}
 
                     <p onClick={toggleSignInForm} className="text-white text-lg sm:text-xl cursor-pointer">
                         {isSignInForm ? "New to Netflix? Sign Up Now" : "Already Registered? Sign In Now"}
